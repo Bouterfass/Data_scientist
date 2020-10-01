@@ -7,7 +7,7 @@ amount = ["6558.07", "468.95", "0.487526", "762.84", "8.86", "85.26", "0.151268"
 
 
 
-hash = curr.zip(amount.map(&:to_f)).to_h
+puts hash = curr.zip(amount.map(&:to_f)).to_h
 
 
 puts "Monnaie à la valeur la plus haute " + hash.max_by{|k,v| v}.to_s
