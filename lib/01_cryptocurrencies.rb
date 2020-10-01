@@ -12,7 +12,7 @@ hash = curr.zip(amount.map(&:to_f)).to_h
 
 puts "Monnaie à la valeur la plus haute " + hash.max_by{|k,v| v}.to_s
 puts "Monnaie à la valeur la plus basse " + hash.min_by{|k,v| v}.to_s
-puts "Les monnaies dont la valeur est unférieur à 6000 " + hash.select{|k,v| v < 6000}.to_s
+puts "Les monnaies dont la valeur est unférieur à 6000 " + hash.select{|k,v| v < 6000}.keys.to_s
 puts "La monnaie la plus chère inférieur à 6000 est " + hash.sort_by{|k,v| v}.reverse.reject{|k,v| v >= 6000}.to_h.keys[0].to_s + " et sa valeur est " + hash.sort_by{|k,v| v}.reverse.reject{|k,v| v >= 6000}.to_h.values[0].to_s + "."
 
 
