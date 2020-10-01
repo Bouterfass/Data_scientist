@@ -17,7 +17,7 @@ def menu
     puts "                      ├ 5__La liste trié par taille en fonction de la taille de @."
     puts "                      ├ 6__La position de @epenser dans la liste"
     puts "                      ├ 7__Tous les Twittos ayant une taille de @ spécifique"
-    puts "                      └ 0__Quiiter le programme"
+    puts "                      └ 0__Quitter le programme"
     puts "Votre choix : "
     print "> "
 end
@@ -39,7 +39,7 @@ choix = gets.chomp.to_i
 while choix != 0
     case choix.to_i
         when 1
-            puts "Le @ le plus cours est " +array.min { |a,b| a.length <=> b.length}.to_s + "."
+            puts "Le @ le plus cours est " +array.min{ |a,b| a.length <=> b.length}.to_s + "."
         when 2
             puts "Le nombre de @ constitué d'exactement 5 caractères est de "+array.count{|x| x.size == 6}.to_s + "."
         when 3
@@ -47,7 +47,7 @@ while choix != 0
         when 4
             puts "Voici la liste trié par ordre alphabétique : "+array.sort.to_s + "."
         when 5
-            puts "Voici la liste des Twittos trié en fonction de la taille de leur @ "+array.sort_by {|x| x.length}.to_s + "."
+            puts "Voici la liste des Twittos trié en fonction de la taille de leur @ "+array.sort_by{|x| x.length}.to_s + "."
         when 6
             puts "Position de @epenser dans la liste : " +array.index('@epenser').to_s + "."
         when 7
